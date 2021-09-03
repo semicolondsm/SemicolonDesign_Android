@@ -1,6 +1,6 @@
 package com.semicolon.semicolondesign.colors
 
-enum class Number {
+enum class NumberOfColor {
     N50,
     N100,
     N200,

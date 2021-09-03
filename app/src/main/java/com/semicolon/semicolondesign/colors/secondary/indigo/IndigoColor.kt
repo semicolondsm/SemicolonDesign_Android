@@ -1,41 +1,20 @@
 package com.semicolon.semicolondesign.colors.secondary.indigo
 
 import androidx.compose.ui.graphics.Color
-import com.semicolon.semicolondesign.colors.primary.black.black
+import com.semicolon.semicolondesign.colors.NumberOfColor
 
 
-fun indigo(number: Int): Color {
+fun indigo(number: NumberOfColor): Color {
     return when (number) {
-        50 -> indigo50
-        100 -> indigo100
-        200 -> indigo200
-        300 -> indigo300
-        400 -> indigo400
-        500 -> indigo500
-        600 -> indigo600
-        700 -> indigo700
-        800 -> indigo800
-        900 -> indigo900
-        else -> black
+        NumberOfColor.N50 -> indigo50
+        NumberOfColor.N100 -> indigo100
+        NumberOfColor.N200 -> indigo200
+        NumberOfColor.N300 -> indigo300
+        NumberOfColor.N400 -> indigo400
+        NumberOfColor.N500 -> indigo500
+        NumberOfColor.N600 -> indigo600
+        NumberOfColor.N700 -> indigo700
+        NumberOfColor.N800 -> indigo800
+        NumberOfColor.N900 -> indigo900
     }
 }
-
-fun indigo50(): Color = indigo50
-
-fun indigo100(): Color = indigo100
-
-fun indigo200(): Color = indigo200
-
-fun indigo300(): Color = indigo300
-
-fun indigo400(): Color = indigo400
-
-fun indigo500(): Color = indigo500
-
-fun indigo600(): Color = indigo600
-
-fun indigo700(): Color = indigo700
-
-fun indigo800(): Color = indigo800
-
-fun indigo900(): Color = indigo900
