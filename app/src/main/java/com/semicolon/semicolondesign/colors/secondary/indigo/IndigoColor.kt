@@ -1,11 +1,22 @@
 package com.semicolon.semicolondesign.colors.secondary.indigo
 
 import androidx.compose.ui.graphics.Color
+import com.semicolon.semicolondesign.colors.primary.black.black
 
 
 fun indigo(number: Int): Color {
     return when (number) {
         50 -> indigo50
+        100 -> indigo100
+        200 -> indigo200
+        300 -> indigo300
+        400 -> indigo400
+        500 -> indigo500
+        600 -> indigo600
+        700 -> indigo700
+        800 -> indigo800
+        900 -> indigo900
+        else -> black
     }
 }
 
