@@ -1,41 +1,22 @@
 package com.semicolon.semicolondesign.colors.primary.purple
 
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
+import com.semicolon.semicolondesign.colors.Number
 import com.semicolon.semicolondesign.colors.primary.black.black
 
 
-fun purple(number: Int): Color {
+fun purple(number: Number): Color {
     return when (number) {
-        50 -> purple50
-        100 -> purple100
-        200 -> purple200
-        300 -> purple300
-        400 -> purple400
-        500 -> purple500
-        600 -> purple600
-        700 -> purple700
-        800 -> purple800
-        900 -> purple900
-        else -> black
+        Number.N50 -> purple50
+        Number.N100 -> purple100
+        Number.N200 -> purple200
+        Number.N300 -> purple300
+        Number.N400 -> purple400
+        Number.N500 -> purple500
+        Number.N600 -> purple600
+        Number.N700 -> purple700
+        Number.N800 -> purple800
+        Number.N900 -> purple900
     }
 }
-
-fun purple50(): Color = purple50
-
-fun purple100(): Color = purple100
-
-fun purple200(): Color = purple200
-
-fun purple300(): Color = purple300
-
-fun purple400(): Color = purple400
-
-fun purple500(): Color = purple500
-
-fun purple600(): Color = purple600
-
-fun purple700(): Color = purple700
-
-fun purple800(): Color = purple800
-
-fun purple900(): Color = purple900
