@@ -28,7 +28,7 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion compose_version
-        kotlinCompilerVersion '1.5.10'
+        kotlinCompilerVersion '1.5.20'
     }
     kotlinOptions {
         jvmTarget = '1.8'
