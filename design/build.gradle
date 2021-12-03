@@ -62,3 +62,5 @@ afterEvaluate {
         }
     }
 }
+
+group = 'com.github.semicolondsm'
