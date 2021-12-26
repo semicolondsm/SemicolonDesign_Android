@@ -1,4 +1,4 @@
-package com.semicolon.design.secondary.indigo
+package com.semicolon.design.color.secondary.indigo
 
 import androidx.compose.ui.graphics.Color
 

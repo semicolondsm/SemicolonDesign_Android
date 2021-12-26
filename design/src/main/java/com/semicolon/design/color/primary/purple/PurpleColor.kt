@@ -1,7 +1,7 @@
-package com.semicolon.design.primary.purple
+package com.semicolon.design.color.primary.purple
 
 import androidx.compose.ui.graphics.Color
-import com.semicolon.design.NumberOfColor
+import com.semicolon.design.color.NumberOfColor
 
 
 fun purple(numberOfColor: NumberOfColor): Color {

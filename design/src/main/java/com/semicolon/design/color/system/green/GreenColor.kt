@@ -1,7 +1,7 @@
-package com.semicolon.design.system.green
+package com.semicolon.design.color.system.green
 
 import androidx.compose.ui.graphics.Color
-import com.semicolon.design.NumberOfColor
+import com.semicolon.design.color.NumberOfColor
 
 fun green(number: NumberOfColor): Color {
     return when (number) {

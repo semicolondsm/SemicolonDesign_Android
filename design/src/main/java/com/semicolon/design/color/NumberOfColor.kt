@@ -1,4 +1,4 @@
-package com.semicolon.design
+package com.semicolon.design.color
 
 enum class NumberOfColor {
     N50,

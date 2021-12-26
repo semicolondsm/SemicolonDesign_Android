@@ -1,4 +1,4 @@
-package com.semicolon.design.primary.white
+package com.semicolon.design.color.primary.white
 
 import androidx.compose.ui.graphics.Color
 

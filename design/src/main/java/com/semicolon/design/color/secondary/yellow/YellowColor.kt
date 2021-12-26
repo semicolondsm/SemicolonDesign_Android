@@ -1,7 +1,7 @@
-package com.semicolon.design.secondary.yellow
+package com.semicolon.design.color.secondary.yellow
 
 import androidx.compose.ui.graphics.Color
-import com.semicolon.design.NumberOfColor
+import com.semicolon.design.color.NumberOfColor
 
 fun yellow(number: NumberOfColor): Color {
     return when (number) {

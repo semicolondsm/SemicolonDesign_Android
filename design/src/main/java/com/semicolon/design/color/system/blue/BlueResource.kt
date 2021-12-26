@@ -1,4 +1,4 @@
-package com.semicolon.design.system.blue
+package com.semicolon.design.color.system.blue
 
 import androidx.compose.ui.graphics.Color
 

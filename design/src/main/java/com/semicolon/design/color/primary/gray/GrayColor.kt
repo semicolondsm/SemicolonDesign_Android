@@ -1,7 +1,7 @@
-package com.semicolon.design.primary.gray
+package com.semicolon.design.color.primary.gray
 
 import androidx.compose.ui.graphics.Color
-import com.semicolon.design.NumberOfColor
+import com.semicolon.design.color.NumberOfColor
 
 
 fun gray(number: NumberOfColor): Color {

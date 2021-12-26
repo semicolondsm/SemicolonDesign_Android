@@ -1,7 +1,7 @@
-package com.semicolon.design.secondary.indigo
+package com.semicolon.design.color.secondary.indigo
 
 import androidx.compose.ui.graphics.Color
-import com.semicolon.design.NumberOfColor
+import com.semicolon.design.color.NumberOfColor
 
 
 fun indigo(number: NumberOfColor): Color {

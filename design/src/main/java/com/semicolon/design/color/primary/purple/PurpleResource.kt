@@ -1,4 +1,4 @@
-package com.semicolon.design.primary.purple
+package com.semicolon.design.color.primary.purple
 
 import androidx.compose.ui.graphics.Color
 

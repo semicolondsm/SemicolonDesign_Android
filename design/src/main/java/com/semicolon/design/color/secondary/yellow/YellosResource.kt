@@ -1,4 +1,4 @@
-package com.semicolon.design.secondary.yellow
+package com.semicolon.design.color.secondary.yellow
 
 import androidx.compose.ui.graphics.Color
 
