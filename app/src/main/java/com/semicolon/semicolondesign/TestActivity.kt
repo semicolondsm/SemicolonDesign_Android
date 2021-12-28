@@ -221,10 +221,11 @@ class TestActivity : AppCompatActivity() {
                     }
                 }
 
-                ToggleSwitch(
-                    onToggleOn = {makeToast("토글 스위치 켜짐")},
-                    onToggleOff = {makeToast("토글 스위치 꺼짐")}
-                )
+                ToggleSwitch()
+                ToggleButton(items = arrayOf("버튼", "버튼"))
+                ToggleButton(items = arrayOf("버튼", "버튼", "버튼"))
+                ToggleButton(items = arrayOf("버튼", "버튼", "버튼", "버튼"))
+                ToggleButton(items = arrayOf())
             }
         }
     }
