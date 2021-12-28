@@ -16,6 +16,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.semicolon.design.util.CircularProgressBar
@@ -147,6 +149,7 @@ fun BasicSmallButton(
     progressBarBackgroundColor: Color = Color.Transparent,
     isEnabled: Boolean,
     isLoading: Boolean,
+    underlineEffect: Boolean = false,
     icon: Painter? = null,
     iconPosition: IconPosition = IconPosition.LEFT,
     modifier: Modifier,
@@ -157,53 +160,62 @@ fun BasicSmallButton(
     if (outlineColor != null && isEnabled)
         fixedModifier = fixedModifier.border(1.dp, outlineColor, RoundedCornerShape(4.dp))
     val contentColor = if (isEnabled) defaultContentColor else disabledContentColor
-    BasicButton(
-        defaultColor = defaultColor,
-        pressedColor = pressedColor,
-        disabledColor = disabledColor,
-        isEnabled = isEnabled,
-        modifier = fixedModifier
-            .height(36.dp)
-            .wrapContentWidth(),
-        onClick = onClick
+    Box(
+        modifier = Modifier.padding(horizontal = 16.dp, vertical = 8.dp)
     ) {
-        Row(
-            modifier.padding(horizontal = 16.dp),
-            verticalAlignment = Alignment.CenterVertically
+        BasicButton(
+            defaultColor = defaultColor,
+            pressedColor = pressedColor,
+            disabledColor = disabledColor,
+            isEnabled = isEnabled,
+            modifier = fixedModifier
+                .height(36.dp)
+                .wrapContentWidth(),
+            onClick = onClick
         ) {
-            if (!isLoading && icon != null && iconPosition == IconPosition.LEFT) {
-                Icon(
-                    painter = icon,
-                    tint = contentColor,
-                    contentDescription = "",
-                    modifier = Modifier
-                        .width(16.dp)
-                        .height(16.dp)
-                )
-                Spacer(modifier = Modifier.width(4.dp))
-            }
-            Text(text = text, fontSize = 14.sp, color = contentColor)
-            if (!isLoading && icon != null && iconPosition == IconPosition.RIGHT) {
-                Spacer(modifier = Modifier.width(4.dp))
-                Icon(
-                    painter = icon,
-                    tint = contentColor,
-                    contentDescription = "",
-                    modifier = Modifier
-                        .width(16.dp)
-                        .height(16.dp)
-                )
-            }
-            if (isLoading) {
-                Row {
-                    Spacer(modifier = Modifier.width(4.dp))
-                    CircularProgressBar(
-                        progressColor = progressBarColor,
-                        backgroundColor = progressBarBackgroundColor,
+            Row(
+                modifier.padding(horizontal = 16.dp),
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                if (!isLoading && icon != null && iconPosition == IconPosition.LEFT) {
+                    Icon(
+                        painter = icon,
+                        tint = contentColor,
+                        contentDescription = "",
                         modifier = Modifier
-                            .height(14.dp)
-                            .width(14.dp)
+                            .width(16.dp)
+                            .height(16.dp)
                     )
+                    Spacer(modifier = Modifier.width(4.dp))
+                }
+                Text(
+                    text = text,
+                    fontSize = 14.sp,
+                    color = contentColor,
+                    style = TextStyle(textDecoration = if (it) TextDecoration.Underline else TextDecoration.None)
+                )
+                if (!isLoading && icon != null && iconPosition == IconPosition.RIGHT) {
+                    Spacer(modifier = Modifier.width(4.dp))
+                    Icon(
+                        painter = icon,
+                        tint = contentColor,
+                        contentDescription = "",
+                        modifier = Modifier
+                            .width(16.dp)
+                            .height(16.dp)
+                    )
+                }
+                if (isLoading) {
+                    Row {
+                        Spacer(modifier = Modifier.width(4.dp))
+                        CircularProgressBar(
+                            progressColor = progressBarColor,
+                            backgroundColor = progressBarBackgroundColor,
+                            modifier = Modifier
+                                .height(14.dp)
+                                .width(14.dp)
+                        )
+                    }
                 }
             }
         }
@@ -218,7 +230,7 @@ fun BasicButton(
     isEnabled: Boolean,
     modifier: Modifier,
     onClick: () -> Unit,
-    contents: @Composable () -> Unit
+    contents: @Composable (isPressed: Boolean) -> Unit
 ) {
     val interactionSource = remember { MutableInteractionSource() }
     val isPressed = interactionSource.collectIsPressedAsState()
@@ -234,6 +246,6 @@ fun BasicButton(
             ) { onClick() },
         contentAlignment = Alignment.Center
     ) {
-        contents()
+        contents(isPressed.value)
     }
 }
