@@ -62,7 +62,8 @@ fun BasicLargeButton(
     onClick: () -> Unit
 ) {
     var fixedModifier = modifier
-        .width(328.dp)
+        .fillMaxWidth()
+        .padding(horizontal = 16.dp)
         .clip(RoundedCornerShape(12.dp))
     if (outlineColor != null && isEnabled)
         fixedModifier = fixedModifier.border(1.dp, outlineColor, RoundedCornerShape(12.dp))
