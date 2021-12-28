@@ -168,6 +168,7 @@ fun BasicSmallButton(
             pressedColor = pressedColor,
             disabledColor = disabledColor,
             isEnabled = isEnabled,
+            isLoading = isLoading,
             modifier = fixedModifier
                 .height(36.dp)
                 .wrapContentWidth(),
@@ -192,7 +193,7 @@ fun BasicSmallButton(
                     text = text,
                     fontSize = 14.sp,
                     color = contentColor,
-                    style = TextStyle(textDecoration = if (it) TextDecoration.Underline else TextDecoration.None)
+                    style = TextStyle(textDecoration = if (it && underlineEffect) TextDecoration.Underline else TextDecoration.None)
                 )
                 if (!isLoading && icon != null && iconPosition == IconPosition.RIGHT) {
                     Spacer(modifier = Modifier.width(4.dp))
@@ -228,6 +229,7 @@ fun BasicButton(
     pressedColor: Color,
     disabledColor: Color,
     isEnabled: Boolean,
+    isLoading: Boolean = false,
     modifier: Modifier,
     onClick: () -> Unit,
     contents: @Composable (isPressed: Boolean) -> Unit
@@ -242,7 +244,7 @@ fun BasicButton(
             .clickable(
                 interactionSource = interactionSource,
                 indication = null,
-                enabled = isEnabled
+                enabled = isEnabled && !isLoading
             ) { onClick() },
         contentAlignment = Alignment.Center
     ) {
