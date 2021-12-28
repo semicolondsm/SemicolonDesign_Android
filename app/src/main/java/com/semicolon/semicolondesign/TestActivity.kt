@@ -220,6 +220,11 @@ class TestActivity : AppCompatActivity() {
                         makeToast("로딩중 테두리 작은 버튼 눌림")
                     }
                 }
+
+                ToggleSwitch(
+                    onToggleOn = {makeToast("토글 스위치 켜짐")},
+                    onToggleOff = {makeToast("토글 스위치 꺼짐")}
+                )
             }
         }
     }
