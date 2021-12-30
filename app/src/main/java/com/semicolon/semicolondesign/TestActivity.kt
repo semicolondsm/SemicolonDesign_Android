@@ -4,9 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.ui.Alignment
@@ -25,6 +23,16 @@ class TestActivity : AppCompatActivity() {
                 verticalArrangement = Arrangement.spacedBy(8.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Dropdown(
+                    items = arrayOf("선택1", "선택2"),
+                    defaultItemIndex = 1
+                )
+                Dropdown(
+                    items = arrayOf("선택1", "선택1234567890"),
+                    placeholder = "드롭다운",
+                    menuDirection = MenuDirection.RIGHT
+                )
+
                 DefaultFillButton(text = "버튼") { makeToast("기본 꽉찬 버튼 눌림") }
                 DefaultFillButton(text = "버튼", isEnabled = false) {}
                 ColoredFillButton(text = "버튼") { makeToast("컬러 꽉찬 버튼 눌림") }
