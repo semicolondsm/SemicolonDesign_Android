@@ -6,13 +6,10 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextLayoutResult
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
 
 @Composable
@@ -28,7 +25,6 @@ fun Title1(
     softWrap: Boolean = true,
     maxLines: Int = Int.MAX_VALUE,
     onTextLayout: (TextLayoutResult) -> Unit = {},
-    style: TextStyle = LocalTextStyle.current,
 ) {
     Typography(
         text = text,
@@ -44,7 +40,6 @@ fun Title1(
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -53,16 +48,16 @@ fun Title2(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 54,
-    latterSpacing: Int = 0,
-    color : Color = Color.Black,
+    letterSpacing: Int = 0,
+    color : Color = Color.Unspecified,
     textDecoration: TextDecoration? = null,
-    textAlign : TextAlign?,
-    overflow: TextOverflow,
-    softWrap: Boolean,
-    maxLines: Int,
-    onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
-) {
+    textAlign: TextAlign? = null,
+    overflow: TextOverflow = TextOverflow.Clip,
+    softWrap: Boolean = true,
+    maxLines: Int = Int.MAX_VALUE,
+    onTextLayout: (TextLayoutResult) -> Unit = {},
+
+    ) {
     Typography(
         text = text,
         modifier = modifier,
@@ -70,14 +65,13 @@ fun Title2(
         size = 36,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -86,7 +80,7 @@ fun Title3(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 48,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -94,7 +88,6 @@ fun Title3(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -103,14 +96,13 @@ fun Title3(
         size = 32,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -119,7 +111,7 @@ fun Subtitle1(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 48,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -127,7 +119,6 @@ fun Subtitle1(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -136,14 +127,13 @@ fun Subtitle1(
         size = 32,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -152,7 +142,7 @@ fun Subtitle2(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 42,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -160,7 +150,6 @@ fun Subtitle2(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -169,14 +158,13 @@ fun Subtitle2(
         size = 28,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -185,7 +173,7 @@ fun Subtitle3(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 36,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -193,7 +181,6 @@ fun Subtitle3(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -202,14 +189,13 @@ fun Subtitle3(
         size = 24,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -218,7 +204,7 @@ fun Subtitle4(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 30,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -226,7 +212,6 @@ fun Subtitle4(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -235,14 +220,13 @@ fun Subtitle4(
         size = 20,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -251,7 +235,7 @@ fun Body1(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 24,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -259,7 +243,6 @@ fun Body1(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -268,14 +251,13 @@ fun Body1(
         size = 16,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -284,7 +266,7 @@ fun Body2(
     text: String,
     modifier : Modifier = Modifier,
     lineHeight: Int = 21,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -292,7 +274,6 @@ fun Body2(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -301,14 +282,13 @@ fun Body2(
         size = 14,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -317,7 +297,7 @@ fun Body3(
     text: String,
     modifier: Modifier = Modifier,
     lineHeight: Int = 18,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -325,7 +305,6 @@ fun Body3(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -334,14 +313,13 @@ fun Body3(
         size = 12,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -350,7 +328,7 @@ fun Botton(
     text: String,
     modifier: Modifier = Modifier,
     lineHeight: Int = 21,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign : TextAlign?,
@@ -358,7 +336,6 @@ fun Botton(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Typography(
         text = text,
@@ -367,14 +344,13 @@ fun Botton(
         size = 14,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -383,7 +359,7 @@ fun Caption(
     text: String,
     modifier: Modifier =Modifier,
     lineHeight: Int = 18,
-    latterSpacing: Int = 0,
+    letterSpacing: Int = 0,
     color : Color = Color.Black,
     textDecoration: TextDecoration? = null,
     textAlign: TextAlign? = null,
@@ -391,7 +367,6 @@ fun Caption(
     softWrap: Boolean = true,
     maxLines: Int = Int.MAX_VALUE,
     onTextLayout: (TextLayoutResult) -> Unit = {},
-    style: TextStyle = LocalTextStyle.current
 ) {
     Typography(
         text = text,
@@ -400,14 +375,13 @@ fun Caption(
         size = 12,
         color = color,
         lineHeight = lineHeight,
-        letterSpacing = latterSpacing,
+        letterSpacing = letterSpacing,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
     )
 }
 
@@ -426,7 +400,6 @@ fun Typography(
     softWrap: Boolean,
     maxLines: Int,
     onTextLayout: (TextLayoutResult) -> Unit,
-    style: TextStyle
 ) {
     Text(
         text = text,
@@ -442,7 +415,6 @@ fun Typography(
         softWrap = softWrap,
         maxLines = maxLines,
         onTextLayout = onTextLayout,
-        style = style
-    )
+        )
 }
 
