@@ -32,7 +32,7 @@ fun Title1(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.W500,
+        weight = FontWeight.Bold,
         size = 40,
         color = color,
         lineHeight = lineHeight,
@@ -65,7 +65,7 @@ fun Title2(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.W500,
+        weight = FontWeight.Bold,
         size = 36,
         color = color,
         lineHeight = lineHeight,
@@ -98,7 +98,7 @@ fun Title3(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.W500,
+        weight = FontWeight.Bold,
         size = 32,
         color = color,
         lineHeight = lineHeight,
@@ -131,7 +131,7 @@ fun Subtitle1(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.W400,
+        weight = FontWeight.Medium,
         size = 32,
         color = color,
         lineHeight = lineHeight,
@@ -164,7 +164,7 @@ fun Subtitle2(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.W400,
+        weight = FontWeight.Medium,
         size = 28,
         color = color,
         lineHeight = lineHeight,
@@ -197,7 +197,7 @@ fun Subtitle3(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.W400,
+        weight = FontWeight.Medium,
         size = 24,
         color = color,
         lineHeight = lineHeight,
@@ -263,7 +263,7 @@ fun Body1(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = FontWeight.Normal,
         size = 16,
         color = color,
         lineHeight = lineHeight,
@@ -296,7 +296,7 @@ fun Body2(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = FontWeight.Normal,
         size = 14,
         color = color,
         lineHeight = lineHeight,
@@ -428,13 +428,13 @@ fun MiniCaption(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = FontWeight.Normal,
         size = 8,
         color = color,
         lineHeight = lineHeight,
         letterSpacing = letterSpacing,
         baselineToTop = 10f,
-        baselineToBottom =2f,
+        baselineToBottom = 2f,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
@@ -463,7 +463,8 @@ fun Typography(
     onTextLayout: (TextLayoutResult) -> Unit
 ) {
 
-    val baselineModifier = modifier.paddingFromBaseline(top = baselineToTop.sp, bottom = baselineToBottom.sp)
+    val baselineModifier =
+        modifier.paddingFromBaseline(top = baselineToTop.sp, bottom = baselineToBottom.sp)
     Text(
         style = TextStyle(
             color = color,
