@@ -19,6 +19,7 @@ import androidx.compose.ui.unit.sp
 fun Title1(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Bold,
     lineHeight: Int = 60,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -32,7 +33,7 @@ fun Title1(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Bold,
+        weight = fontWeight,
         size = 40,
         color = color,
         lineHeight = lineHeight,
@@ -52,6 +53,7 @@ fun Title1(
 fun Title2(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Bold,
     lineHeight: Int = 54,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -65,7 +67,7 @@ fun Title2(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Bold,
+        weight = fontWeight,
         size = 36,
         color = color,
         lineHeight = lineHeight,
@@ -85,6 +87,7 @@ fun Title2(
 fun Title3(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Bold,
     lineHeight: Int = 48,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -98,7 +101,7 @@ fun Title3(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Bold,
+        weight = fontWeight,
         size = 32,
         color = color,
         lineHeight = lineHeight,
@@ -118,6 +121,7 @@ fun Title3(
 fun Subtitle1(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Medium,
     lineHeight: Int = 48,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -131,7 +135,7 @@ fun Subtitle1(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = fontWeight,
         size = 32,
         color = color,
         lineHeight = lineHeight,
@@ -151,6 +155,7 @@ fun Subtitle1(
 fun Subtitle2(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Medium,
     lineHeight: Int = 42,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -164,7 +169,7 @@ fun Subtitle2(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = fontWeight,
         size = 28,
         color = color,
         lineHeight = lineHeight,
@@ -184,6 +189,7 @@ fun Subtitle2(
 fun Subtitle3(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Medium,
     lineHeight: Int = 36,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -197,7 +203,7 @@ fun Subtitle3(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = fontWeight,
         size = 24,
         color = color,
         lineHeight = lineHeight,
@@ -217,6 +223,7 @@ fun Subtitle3(
 fun Subtitle4(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Medium,
     lineHeight: Int = 30,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -230,7 +237,7 @@ fun Subtitle4(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Medium,
+        weight = fontWeight,
         size = 20,
         color = color,
         lineHeight = lineHeight,
@@ -250,6 +257,7 @@ fun Subtitle4(
 fun Body1(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Normal,
     lineHeight: Int = 24,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -263,7 +271,7 @@ fun Body1(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Normal,
+        weight = fontWeight,
         size = 16,
         color = color,
         lineHeight = lineHeight,
@@ -283,6 +291,7 @@ fun Body1(
 fun Body2(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Normal,
     lineHeight: Int = 21,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -296,7 +305,7 @@ fun Body2(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Normal,
+        weight = fontWeight,
         size = 14,
         color = color,
         lineHeight = lineHeight,
@@ -316,6 +325,7 @@ fun Body2(
 fun Body3(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Normal,
     lineHeight: Int = 18,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -329,7 +339,7 @@ fun Body3(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Normal,
+        weight = fontWeight,
         size = 12,
         color = color,
         lineHeight = lineHeight,
@@ -349,6 +359,7 @@ fun Body3(
 fun Button(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Normal,
     lineHeight: Int = 21,
     letterSpacing: Int = 0,
     color: Color = Color.Unspecified,
@@ -362,7 +373,7 @@ fun Button(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Normal,
+        weight = fontWeight,
         size = 14,
         color = color,
         lineHeight = lineHeight,
@@ -382,6 +393,7 @@ fun Button(
 fun Caption(
     text: String,
     modifier: Modifier = Modifier,
+    fontWeight: FontWeight = FontWeight.Normal,
     lineHeight: Int = 18,
     letterSpacing: Int = 0,
     color: Color = Color.Black,
@@ -395,46 +407,13 @@ fun Caption(
     Typography(
         text = text,
         modifier = modifier,
-        weight = FontWeight.Normal,
+        weight = fontWeight,
         size = 12,
         color = color,
         lineHeight = lineHeight,
         letterSpacing = letterSpacing,
         baselineToTop = 15f,
         baselineToBottom = 3f,
-        textDecoration = textDecoration,
-        textAlign = textAlign,
-        overflow = overflow,
-        softWrap = softWrap,
-        maxLines = maxLines,
-        onTextLayout = onTextLayout
-    )
-}
-
-@Composable
-fun MiniCaption(
-    text: String,
-    modifier: Modifier = Modifier,
-    lineHeight: Int = 12,
-    letterSpacing: Int = 0,
-    color: Color = Color.Black,
-    textDecoration: TextDecoration? = null,
-    textAlign: TextAlign? = null,
-    overflow: TextOverflow = TextOverflow.Clip,
-    softWrap: Boolean = true,
-    maxLines: Int = Int.MAX_VALUE,
-    onTextLayout: (TextLayoutResult) -> Unit = {}
-) {
-    Typography(
-        text = text,
-        modifier = modifier,
-        weight = FontWeight.Normal,
-        size = 8,
-        color = color,
-        lineHeight = lineHeight,
-        letterSpacing = letterSpacing,
-        baselineToTop = 10f,
-        baselineToBottom = 2f,
         textDecoration = textDecoration,
         textAlign = textAlign,
         overflow = overflow,
