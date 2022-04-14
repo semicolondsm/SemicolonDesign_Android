@@ -6,7 +6,7 @@ The design components for Jetpack Compose in Android.
 It is based on Semicolon design system.
 
 ## Download
-Add `maven { url 'https://jitpack.io' }` on your `setting.gradle`.
+Add `maven { url 'https://jitpack.io' }` on your `build.gradle`.
 ``` groovy
 allprojects {
   repositories {
@@ -22,9 +22,6 @@ dependencies {
 }
 ```
 Then you can use this.
-
-## Usage
-You can find usage on [the Github wiki page](https://github.com/semicolondsm/SemicolonDesign_Android/wiki).
 
 ## License
 ```
